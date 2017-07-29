@@ -24,6 +24,7 @@ RSpec.configure do |config|
 require_relative "./helpers/post_helper"
 require_relative "./helpers/user_helper"
 require_relative "./helpers/comment_helper"
+require_relative "./helpers/like_helper"
 
   config.before(:suite) do
   DatabaseCleaner.strategy = :truncation
@@ -38,6 +39,23 @@ end
 config.after(:each) do
   DatabaseCleaner.clean
 end
+
+#
+# config.before(:suite) do
+#   DatabaseCleaner.clean_with(:truncation)
+# end
+#
+# config.before(:each) do |example|
+#   DatabaseCleaner.strategy = example.metadata[:js] ? :deletion : :transaction
+#   DatabaseCleaner.start
+# end
+#
+# config.after(:each) do
+#   Capybara.reset_sessions!
+#   DatabaseCleaner.clean
+# end
+
+
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`

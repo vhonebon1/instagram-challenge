@@ -55,6 +55,7 @@ gem "rubocop-rails"
 gem "database_cleaner"
 gem 'timecop'
 gem 'orderly'
+gem 'carrierwave'
 
 group :test do
   gem 'rspec-rails'
