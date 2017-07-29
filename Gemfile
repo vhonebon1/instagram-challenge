@@ -52,6 +52,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "rubocop", "0.48.1"
 gem "rubocop-rails"
+gem "database_cleaner"
 
 group :test do
   gem 'rspec-rails'
