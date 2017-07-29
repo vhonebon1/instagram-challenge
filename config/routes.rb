@@ -8,4 +8,7 @@ resources :users
 resources :posts
 
 resources :comments
+
+resources :likes
+
 end
