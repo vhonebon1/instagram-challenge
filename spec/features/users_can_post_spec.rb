@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Timeline", type: :feature do
-  scenario "Can submit posts and view them" do
+  scenario "Users can submit posts and view them" do
     sign_up
     create_post
     expect(page).to have_content("https://s-media-cache-ak0.pinimg.com/originals/a5/d5/2b/a5d52bf7a10b6468e2d72fa2829c6dfe.jpg")
