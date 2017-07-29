@@ -12,4 +12,6 @@ resources :users
 
 resources :posts
 resources :post
+
+resources :comments
 end
