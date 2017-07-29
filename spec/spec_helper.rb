@@ -21,6 +21,7 @@ RSpec.configure do |config|
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
 
+require_relative "./helpers/post_helper"
   config.before(:suite) do
   DatabaseCleaner.strategy = :truncation
   DatabaseCleaner.clean_with(:truncation)
