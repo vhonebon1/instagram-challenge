@@ -8,4 +8,6 @@ get 'users/show'
 
 resources :users
 
+resources :pictures
+
 end
