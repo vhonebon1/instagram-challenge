@@ -1,12 +1,14 @@
 <h1>Users#show</h1>
 <p>User <%= @user.id %>'s Page</p>
 
-<%= link_to "New post", new_post_url(:user_id => @user.id) %>
-
-
 <% if !@user.posts.empty? %>
-  <% @user.posts.reverse.each do |post| %>
- <p>  <%= post.link %> </p>
- <p>  <%= post.created_at %> </p><br>
-  <% end %>
-  <% end %>
+<% @user.posts.reverse.each do |post| %>
+<p>  <%= post.link %> </p>
+<p>  <%= post.created_at %> </p>
+<%= link_to new_post_path do %>
+Comment
+<% end %>
+<% end %>
+<% end %>
+
+<br><%= link_to "New post", new_post_url(:user_id => @user.id) %>
