@@ -1,14 +1,15 @@
-<h1>Users#show</h1>
-<p>User <%= @user.id %>'s Page</p>
+<h1><%= @user.name %></h1>
 
 <% if !@user.posts.empty? %>
 <% @user.posts.reverse.each do |post| %>
 <p>  <%= post.link %> </p>
 <p>  <%= post.created_at %> </p>
-<%= link_to new_post_path do %>
-Comment
+<p>  <% post.comments.each do |comment| %> </p>
+<p>  <%= comment.comment %> </p>
+<% end %>
+<p><%= link_to "Comment", new_comment_url(post_id: post.id, user_id: @user.id) %></p>
 <% end %>
 <% end %>
-<% end %>
+
 
 <br><%= link_to "New post", new_post_url(:user_id => @user.id) %>
