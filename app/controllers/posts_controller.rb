@@ -1,11 +1,13 @@
 class PostsController < ApplicationController
   def new
+    session[:user_id] = params[:user_id]
     @post = Post.new
   end
 
   def create
-    @post = Post.create(post_params)
-    redirect_to posts_url
+    @user = User.find(session[:user_id])
+    @user.posts.create(post_params)
+    redirect_to @user
   end
 
   def index
