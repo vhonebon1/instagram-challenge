@@ -6,8 +6,10 @@ get 'users/create'
 
 get 'users/show'
 
+get 'posts/new'
+
 resources :users
 
-resources :pictures
-
+resources :posts
+resources :post
 end
