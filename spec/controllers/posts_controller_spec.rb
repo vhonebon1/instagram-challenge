@@ -12,7 +12,7 @@ RSpec.describe PostsController, type: :controller do
   end
 
   describe "POST /" do
-    it "responds with 200" do
+    it "successfully redirects after sign up" do
       sign_up
       session[:user_id] = 1
       @user = User.find(session[:user_id])
@@ -20,7 +20,7 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to redirect_to(@user)
     end
 
-    it "creates a post" do
+    it "creates a post in the database" do
       sign_up
       session[:user_id] = 1
       @user = User.find(session[:user_id])

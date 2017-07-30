@@ -1,20 +1,29 @@
 require 'rails_helper'
 
 RSpec.feature "Comments", type: :feature do
-  scenario "Can comment on a post" do
+  scenario "a user can comment on a post" do
     sign_up
     create_post
     create_comment
     expect(page).to have_content("I am a comment")
   end
 
-  scenario "Creates a comment in the database" do
+  scenario "a comment is created in the database" do
     sign_up
     create_post
     expect { create_comment }.to change(Comment, :count).by(1)
   end
 
-  scenario "are entered in reverse chronological order" do
+  scenario "posts can have multiple comments" do
+    sign_up
+    create_post
+    create_comment
+    create_second_comment
+    expect(page).to have_content("I am a comment")
+    expect(page).to have_content("I am a second comment")
+  end
+
+  scenario "comments are displayed in reverse chronological order" do
     sign_up
     create_post
     create_comment

@@ -56,6 +56,7 @@ gem "database_cleaner"
 gem 'timecop'
 gem 'orderly'
 gem 'carrierwave'
+gem 'mini_magick'
 
 group :test do
   gem 'rspec-rails'
