@@ -21,5 +21,4 @@ class LikesController < ApplicationController
   def like_params
     params.require(:post_id)
   end
-
 end

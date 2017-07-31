@@ -11,7 +11,7 @@ RSpec.describe LikesController, type: :controller do
 
     it "adds a like to the database" do
       sign_up
-      expect{ Like.create(post_id: 1) }.to change{ Like.count }.by(1)
+      expect { Like.create(post_id: 1) }.to change { Like.count }.by(1)
     end
   end
 end

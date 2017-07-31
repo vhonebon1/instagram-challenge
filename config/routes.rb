@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-get 'users/show'
+  get 'users/show'
 
-resources :users
+  resources :users
 
-resources :posts
+  resources :posts
 
-resources :comments
+  resources :comments
 
-resources :likes
+  resources :likes
 
 end
