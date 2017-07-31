@@ -16,4 +16,4 @@ Instagram is a platform where users can upload and share their images.  Users ca
 
 A classic 90's web interface
 
-![ScreenShot](http://imgur.com/k997mcZ)
+![ScreenShot](http://imgur.com/k997mcZ.jpg)
