@@ -16,7 +16,7 @@ RSpec.describe PostsController, type: :controller do
       sign_up
       session[:user_id] = 1
       @user = User.find(session[:user_id])
-      post :create, params: { post: { link: "http://cdn2-www.dogtime.com/assets/uploads/2011/03/cute-dog-names.jpg" } }
+      post :create, params: { post: { caption: "This is a dog" } }
       expect(response).to redirect_to(@user)
     end
 
@@ -24,8 +24,8 @@ RSpec.describe PostsController, type: :controller do
       sign_up
       session[:user_id] = 1
       @user = User.find(session[:user_id])
-      post :create, params: { post: { link: "https://iheartdogs.com/wp-content/uploads/2015/01/Screenshot-2015-01-17-16.15.29.png" } }
-      expect(Post.find_by(link: "https://iheartdogs.com/wp-content/uploads/2015/01/Screenshot-2015-01-17-16.15.29.png")).to be
+      post :create, params: { post: { caption: "This is another dog" } }
+      expect(Post.find_by(caption: "This is another dog")).to be
     end
   end
 

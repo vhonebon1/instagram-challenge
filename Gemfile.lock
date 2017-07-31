@@ -218,7 +218,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
-  carrierwave
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   database_cleaner
   jbuilder (~> 2.5)

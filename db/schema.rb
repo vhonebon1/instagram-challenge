@@ -31,8 +31,9 @@ ActiveRecord::Schema.define(version: 20170729193102) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "link"
     t.bigint "user_id"
+    t.string "image"
+    t.string "caption"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"

@@ -55,7 +55,7 @@ gem "rubocop-rails"
 gem "database_cleaner"
 gem 'timecop'
 gem 'orderly'
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 
 group :test do
