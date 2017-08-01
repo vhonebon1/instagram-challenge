@@ -25,6 +25,7 @@ RSpec.configure do |config|
   require_relative "./helpers/user_helper"
   require_relative "./helpers/comment_helper"
   require_relative "./helpers/like_helper"
+  require_relative "./helpers/manual_controllers_helper"
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
