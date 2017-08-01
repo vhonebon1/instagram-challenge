@@ -5,7 +5,7 @@
 <% @user.posts.reverse.each do |post| %>
 <p><%= image_tag(post.image.url, alt: 'Image') if post.image? %></p>
 <p><%= post.caption %></p>
-<p>  <%= post.created_at %> </p> 
+<p>  <%= post.created_at.strftime("%b %e, %l:%M %p") %> </p> 
 <p>  Likes: <%= post.likes.count %> </p>
 <%= link_to "Comment", new_comment_url(post_id: post.id, user_id: @user.id) %>
 <%= link_to "Like", new_like_url(post_id: post.id, user_id: @user.id) %>
